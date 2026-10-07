@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santhosh CSE Amrita</title>
+  <meta name="description" content="Personal website of Santhosh Reddy Thandlam, CSE student at Amrita Vishwa Vidyapeetham." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      background: #09090b;
+      overflow-x: hidden;
+    }
+
+    .screen {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    /* Welcome screen */
+    #home {
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(90, 90, 110, .28), transparent 35%),
+        linear-gradient(135deg, #09090b, #17171c 55%, #0b0b0d);
+    }
+
+    .welcome {
+      max-width: 850px;
+      animation: fadeUp 1s ease both;
+    }
+
+    .welcome .small {
+      font-size: 1rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #b8b8c2;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 8vw, 6.5rem);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      margin-bottom: 18px;
+    }
+
+    .welcome p {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: #c9c9d0;
+      margin-bottom: 42px;
+    }
+
+    .explore {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      border: 1px solid #fff;
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      transition: .25s ease;
+    }
+
+    .explore:hover {
+      background: #fff;
+      color: #09090b;
+      transform: translateY(-3px);
+    }
+
+    /* Information screen */
+    #information {
+      background: #f4f4f5;
+      color: #111114;
+      align-items: flex-start;
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    .info-card {
+      width: min(900px, 100%);
+      background: #fff;
+      border-radius: 28px;
+      padding: clamp(28px, 6vw, 60px);
+      box-shadow: 0 25px 70px rgba(0,0,0,.12);
+      animation: fadeUp 1s ease both;
+    }
+
+    .eyebrow {
+      color: #777781;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      margin-bottom: 35px;
+      letter-spacing: -2px;
+    }
+
+    .details {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid #e5e5e7;
+      margin-bottom: 35px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 20px;
+      padding: 17px 0;
+      border-bottom: 1px solid #e5e5e7;
+    }
+
+    .label {
+      color: #777781;
+      font-weight: 700;
+    }
+
+    .value {
+      font-weight: 600;
+    }
+
+    .about {
+      color: #55555e;
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .social {
+      text-decoration: none;
+      color: #fff;
+      background: #111114;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: .25s ease;
+    }
+
+    .social:hover {
+      transform: translateY(-3px);
+      opacity: .82;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 28px;
+      color: #55555e;
+      text-decoration: none;
+      font-size: .95rem;
+    }
+
+    .back:hover { text-decoration: underline; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .row { grid-template-columns: 1fr; gap: 5px; }
+      h1 { letter-spacing: -2px; }
+      .info-card { border-radius: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- SCREEN 1 -->
+  <section id="home" class="screen">
+    <div class="welcome">
+      <div class="small">Personal Website</div>
+      <h1>Hello, I am<br>Santhosh Reddy</h1>
+      <p>Welcome to my Website</p>
+      <a class="explore" href="#information">
+        Explore <span>↓</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- SCREEN 2 -->
+  <section id="information" class="screen">
+    <div class="info-card">
+      <div class="eyebrow">Get to know me</div>
+      <h2>Information</h2>
+
+      <div class="details">
+        <div class="row">
+          <div class="label">Name</div>
+          <div class="value">Santhosh Reddy Thandlam</div>
+        </div>
+        <div class="row">
+          <div class="label">Native</div>
+          <div class="value">Tirupati</div>
+        </div>
+        <div class="row">
+          <div class="label">College</div>
+          <div class="value">Amrita Vishwa Vidyapeetham, Kerala</div>
+        </div>
+        <div class="row">
+          <div class="label">Branch</div>
+          <div class="value">Computer Science &amp; Engineering (CSE)</div>
+        </div>
+        <div class="row">
+          <div class="label">Batch</div>
+          <div class="value">2026</div>
+        </div>
+        <div class="row">
+          <div class="label">Semester</div>
+          <div class="value">1</div>
+        </div>
+      </div>
+
+      <p class="about">
+        I’m a B.Tech CSE student from Tirupati, currently studying at
+        Amrita Vishwa Vidyapeetham, Kerala. I’m sharing my college journey,
+        student life, travel, vlogs, programming, and coding experiences.
+      </p>
+
+      <div class="socials">
+        <a class="social" href="https://youtube.com/@santhoshcseamrita" target="_blank" rel="noopener noreferrer">
+          ▶ YouTube
+        </a>
+        <a class="social" href="https://www.instagram.com/santhosh_cse.amrita" target="_blank" rel="noopener noreferrer">
+          ◎ Instagram
+        </a>
+      </div>
+
+      <a class="back" href="#home">↑ Back to Welcome</a>
+    </div>
+  </section>
+</body>
+</html>
